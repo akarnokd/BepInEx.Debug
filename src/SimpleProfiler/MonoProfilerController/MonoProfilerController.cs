@@ -31,7 +31,7 @@ namespace MonoProfiler
 
         private void Update()
         {
-            if (_key.Value.IsDown())
+            if (Time.frameCount % 600 == 0)
             {
                 var dumpFile = MonoProfilerPatcher.RunProfilerDump();
                 if (_uniqueNames.Value)
